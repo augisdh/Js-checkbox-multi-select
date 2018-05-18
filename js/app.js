@@ -7,13 +7,13 @@ function selectMulti(event){
     let between = false;
 
     if(event.shiftKey && this.checked){
-        checkBoxes.forEach(checkbox => {
-            if(checkbox === this || checkbox === lastChecked){
+        checkBoxes.forEach(checkBox => {
+            if(checkBox === this || checkBox === lastChecked){
                 between = !between;
             }
 
             if(between){
-                checkbox.checked = true;
+                checkBox.checked = true;
             }
         });
     }
@@ -21,4 +21,4 @@ function selectMulti(event){
     lastChecked = this;
 }
 
-checkBoxes.forEach(checkbox => checkbox.addEventListener("click", selectMulti));
+checkBoxes.forEach(checkBox => checkBox.addEventListener("click", selectMulti));
